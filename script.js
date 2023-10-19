@@ -1,12 +1,13 @@
-const one = document.querySelector("#lightbulb1");
-const two = document.querySelector("#lightbulb2");
-const three = document.querySelector("#lightbulb3");
-const four = document.querySelector("h3");
+let subtitle = document.querySelector("subtitle");
+const lightbulb1 = document.querySelector("#lightbulb1");
+const lightbulb2 = document.querySelector("#lightbulb2");
+const lightbulb3 = document.querySelector("#lightbulb3");
 let count = 0;
 
-new.addEventListener("click", function(){
-    count+=1;
-    subtitle.textContent = `You've clicked the lights ${count} times`;
-    bulb.classList.toggle("item lightbulb active");
-    bulb.classList.toggle("item lightbulb");
-})
+const clickHandler = function (event) {
+  console.log(event);
+  lightbulb1.classList.toggle("active");
+};
+
+lightbulb1.addEventListener("click", clickHandler);
+subtitle.innerHTML = "You've clicked the button ${count} times!";
